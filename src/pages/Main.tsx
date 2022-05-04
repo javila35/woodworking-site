@@ -1,5 +1,9 @@
 import { Layout } from "../layout";
 
 export const Main = () => {
-  return <Layout>Hello World</Layout>;
+  return (
+    <Layout>
+      <div>Hello world</div>
+    </Layout>
+  );
 };
