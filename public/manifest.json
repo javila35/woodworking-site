@@ -1,0 +1,8 @@
+{
+  "short_name": "Blue Tree",
+  "name": "Blue Tree Wood Working",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
