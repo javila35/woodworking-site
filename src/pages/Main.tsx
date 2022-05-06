@@ -1,9 +1,11 @@
 import { Layout } from "../layout";
+import { Bio, ImageGrid } from "../components";
 
 export const Main = () => {
   return (
     <Layout>
-      <div>Hello world</div>
+      <Bio />
+      <ImageGrid />
     </Layout>
   );
 };
