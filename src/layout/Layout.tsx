@@ -1,4 +1,9 @@
-import { Logo, LogoContainer, MainContainer } from "./Layout.styles";
+import {
+  ChildrenContainer,
+  Logo,
+  LogoContainer,
+  MainContainer,
+} from "./Layout.styles";
 import { Nav } from "../components";
 
 type LayoutProps = {
@@ -15,7 +20,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         />
       </LogoContainer>
       <Nav />
-      {children}
+      <ChildrenContainer>{children}</ChildrenContainer>
     </MainContainer>
   );
 };
