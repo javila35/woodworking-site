@@ -17,3 +17,8 @@ export const Logo = styled.img`
   max-width: 30vw;
   max-height: 15vh;
 `;
+
+export const ChildrenContainer = styled.div`
+  grid-area: 4 / 2 / 7 / 8;
+  width: 30vw;
+`;
