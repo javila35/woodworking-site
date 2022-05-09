@@ -20,4 +20,5 @@ export const Logo = styled.img`
 
 export const ChildrenContainer = styled.div`
   grid-area: 4 / 2 / 7 / 8;
+  width: 30vw;
 `;
