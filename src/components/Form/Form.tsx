@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
 import {
   InputContainer,
@@ -16,7 +17,15 @@ export const Form = () => {
     // formState: { errors },
   } = useForm();
 
-  const onSubmit = handleSubmit((data) => console.log(data));
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+
+    // TODO: Store keys in netlify on deploy and process.env them here
+    // emailjs
+    //   .send("serviceID", "templateID", data, "publicKey")
+    //   .then((res) => console.log(res))
+    //   .catch((err) => console.log(err));
+  });
 
   return (
     <StyledForm onSubmit={onSubmit}>
@@ -25,18 +34,23 @@ export const Form = () => {
         <StyledInput
           type="text"
           placeholder="Name"
-          {...register("Name", { required: true })}
+          {...register("from_name", { required: true })}
         />
       </InputContainer>
-      <StyledLabel>Email: </StyledLabel>
-      <StyledInput
-        type="text"
-        placeholder="Email"
-        {...register("Email", { required: true, pattern: /^\S+@\S+\.\S+$/i })}
-      />
+      <InputContainer>
+        <StyledLabel>Email: </StyledLabel>
+        <StyledInput
+          type="text"
+          placeholder="Email"
+          {...register("from_email", {
+            required: true,
+            pattern: /^\S+@\S+\.\S+$/i,
+          })}
+        />
+      </InputContainer>
       <InputContainer>
         <StyledLabel>What are you looking for?</StyledLabel>
-        <StyledTextArea {...register("info", { required: true })} />
+        <StyledTextArea {...register("message", { required: true })} />
       </InputContainer>
       <input type="submit" />
     </StyledForm>
