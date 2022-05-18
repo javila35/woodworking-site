@@ -1,19 +1,12 @@
 import { Nav as StyledNav } from "./Nav.styles";
-import { Link } from "react-router-dom";
-
-const styledLink = {
-  color: "black",
-};
+import { Link } from "../Link";
 
 export const Nav = () => {
   return (
     <StyledNav>
-      <Link to={"/contact"} style={styledLink}>
-        Contact
-      </Link>
-      <Link to={"/pictures"} style={styledLink}>
-        Pictures
-      </Link>
+      <Link route="/" label="Home" />
+      <Link route="/contact" label="Contact" />
+      <Link route="/pictures" label="Pictures" />
     </StyledNav>
   );
 };
