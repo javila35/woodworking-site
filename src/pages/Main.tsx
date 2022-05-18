@@ -5,7 +5,6 @@ export const Main = () => {
   return (
     <Layout>
       <Bio />
-      <ImageGrid />
     </Layout>
   );
 };
