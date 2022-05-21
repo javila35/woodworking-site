@@ -1,5 +1,5 @@
 import { Layout } from "../layout";
-import { Bio, ImageGrid } from "../components";
+import { Bio } from "../components";
 
 export const Main = () => {
   return (
