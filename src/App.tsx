@@ -3,7 +3,7 @@ import { Main, Contact, Pictures } from "./pages";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
@@ -11,7 +11,7 @@ function App() {
           <Route path="/pictures" element={<Pictures />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

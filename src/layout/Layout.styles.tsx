@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
-// grid-template-rows: repeat(10, 1fr);
 export const MainContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 23px;
   justify-items: center;
+  background-color: #9c6a6e;
+  width: 100vw;
+  height: 100vh;
 `;
 
 export const LogoContainer = styled.div`
@@ -14,11 +16,11 @@ export const LogoContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  max-width: 30vw;
-  max-height: 15vh;
+  max-width: 60vw;
+  max-height: 40vh;
 `;
 
 export const ChildrenContainer = styled.div`
-  grid-area: 4 / 2 / 7 / 8;
-  width: 66vw;
+  grid-area: 3 / 2 / 7 / 8;
+  width: 80vw;
 `;
